@@ -13,9 +13,9 @@ Gem::Specification.new do |spec|
 
   spec.metadata["homepage_uri"] = spec.homepage
   
-  spec.add_runtime_dependency "rack"
-  spec.add_development_dependency "rack-test"
-  spec.add_development_dependency "minitest"
+  spec.add_runtime_dependency "rack", "2.2.3"
+  spec.add_development_dependency "rack-test", "1.1.0"
+  spec.add_development_dependency "minitest", "5.14.4"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
