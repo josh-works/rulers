@@ -1,5 +1,6 @@
 require_relative "test_helper"
-
+# https://gist.github.com/JoshCheek/989a099594059ebf3015
+# will be helpful eventually
 class TestApp < Rulers::Application
 end
 
