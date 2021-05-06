@@ -3,9 +3,7 @@ require "rulers/routing"
 
 module Rulers
   class Application
-    def call(env)
-      `echo debug '#{env}' > debug.txt`;
-      
+    def call(env)      
       if env['PATH_INFO'] == '/favicon.ico'
         return [404, {'Content-Type' => 'text/html'}, []]
       end
@@ -14,7 +12,7 @@ module Rulers
       controller = klass.new(env)
       text = controller.send(act)
       [200, {'Content-Type' => 'text/html'},
-      [text]]
+        [text]]
     end
   end
   
@@ -27,7 +25,4 @@ module Rulers
       @env
     end
   end
-  
-  class Error < StandardError; end
-  # Your code goes here...
 end
