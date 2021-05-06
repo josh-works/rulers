@@ -1,11 +1,10 @@
 require "rulers/version"
-require "rulers/array"
 require "rulers/routing"
 
 module Rulers
   class Application
     def call(env)
-      `echo debug '#{env}'\n > debug.txt`;
+      `echo debug '#{env}' > debug.txt`;
       
       klass, act = get_controller_and_action(env)
       controller = klass.new(env)

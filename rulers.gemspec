@@ -10,8 +10,6 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://intermediateruby.com"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
-
-  spec.metadata["homepage_uri"] = spec.homepage
   
   spec.add_runtime_dependency "rack", "2.2.3"
   spec.add_development_dependency "rack-test", "1.1.0"
