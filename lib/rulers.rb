@@ -9,7 +9,6 @@ module Rulers
           {'Content-Type' => 'text/html'}, []]
       end
       
-      require "pry"; binding.pry
       klass, act = get_controller_and_action(env)
       controller = klass.new(env)
       text = controller.send(act)
