@@ -3,6 +3,11 @@ require_relative "test_helper"
 # will be helpful eventually
 class TestApp < Rulers::Application
 end
+class TestController < Rulers::Controller
+  def myaction
+    "Hello"
+  end
+end
 
 class RulersAppTest < Minitest::Test
   include Rack::Test::Methods
@@ -12,7 +17,7 @@ class RulersAppTest < Minitest::Test
   end
   
   def test_request
-    get "/"
+    get "/test/myaction"
     
     assert last_response.ok?
     body = last_response.body
