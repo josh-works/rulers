@@ -11,9 +11,12 @@ module Rulers
       
       klass, act = get_controller_and_action(env)
       controller = klass.new(env)
-      text = controller.send(act)
-      [200, {'Content-Type' => 'text/html'},
+      begin
+        text = controller.send(act)
+        [200, {'Content-Type' => 'text/html'},
         [text]]
+      rescue raise("Ack Rulers detected an error. ")
+      end
     end
   end
   
