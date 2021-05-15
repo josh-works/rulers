@@ -16,7 +16,7 @@ module Rulers
         [200, {'Content-Type' => 'text/html'},
         [text]]
       rescue
-        File.read("error.html")
+        File.read("./error.html")
       end
     end
   end
