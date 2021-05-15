@@ -15,7 +15,8 @@ module Rulers
         text = controller.send(act)
         [200, {'Content-Type' => 'text/html'},
         [text]]
-      rescue raise("Ack Rulers detected an error. ")
+      rescue
+        File.read("error.html")
       end
     end
   end
