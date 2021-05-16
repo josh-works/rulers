@@ -23,4 +23,10 @@ class RulersAppTest < Minitest::Test
     body = last_response.body
     assert body["Hello"]
   end
+  
+  def test_error
+    get "/test/invalid"
+    
+    assert last_response.ok?
+  end
 end
